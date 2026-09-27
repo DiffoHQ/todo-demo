@@ -1,0 +1,8 @@
+{
+  "name": "todo",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "bin": { "todo": "./dist/cli/index.js" },
+  "scripts": { "test": "vitest run", "build": "tsc -p ." }
+}
