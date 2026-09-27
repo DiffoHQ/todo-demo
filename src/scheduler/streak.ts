@@ -10,7 +10,7 @@ export function streak(history: readonly Completion[]): number {
   let run = 0
   for (const c of history) {
     if (c.skipped) continue
-    if (startOfDay(c.doneAt) > startOfDay(c.dueAt)) break
+    if (c.doneAt > startOfDay(c.dueAt)) break
     run++
   }
   return run

@@ -3,7 +3,7 @@ import { streak } from '../src/scheduler/streak.js'
 import type { Completion } from '../src/store/completions.js'
 
 const day = (d: number, h = 9) => new Date(2026, 8, d, h)
-const onTime = (d: number): Completion => ({ dueAt: day(d, 0), doneAt: day(d), skipped: false })
+const onTime = (d: number): Completion => ({ dueAt: day(d, 0), doneAt: day(d, 0), skipped: false })
 const late = (d: number): Completion => ({ dueAt: day(d, 0), doneAt: day(d + 1), skipped: false })
 const skipped = (d: number): Completion => ({ dueAt: day(d, 0), doneAt: day(d), skipped: true })
 
